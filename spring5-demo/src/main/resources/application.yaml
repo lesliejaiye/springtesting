@@ -1,0 +1,5 @@
+#in VS Code instead of application.properties you have application.yaml to enable H2 Database Console
+
+spring:
+  h2:
+    console.enabled: true
