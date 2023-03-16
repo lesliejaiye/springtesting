@@ -1,7 +1,5 @@
 package com.guru.springframework.spring5demo.controllers;
 
-import javax.xml.ws.RequestWrapper;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +16,7 @@ public class BookController {
         this.bookRepository = bookRepository;
     }
 
+    //defined mapping request 
     @RequestMapping("/books")
     //gives us the model object, this object is what will be returned to the view
     public String getBooks(Model model){
