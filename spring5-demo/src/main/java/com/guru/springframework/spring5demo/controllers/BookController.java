@@ -15,7 +15,7 @@ public class BookController {
     public BookController(BookRepository bookRepository){
         this.bookRepository = bookRepository;
     }
-
+    
     //defined mapping request 
     @RequestMapping("/books")
     //gives us the model object, this object is what will be returned to the view
