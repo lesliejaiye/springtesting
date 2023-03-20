@@ -28,8 +28,8 @@ public class BookController {
     //and this will be provided to he clients view 
         model.addAttribute("books", bookRepository.findAll());
     
-    //this references this controller to look for the list file
-        return "books/list";
+    //this references this controller to look for this list template
+            return "books/list";
 
     }
 }
