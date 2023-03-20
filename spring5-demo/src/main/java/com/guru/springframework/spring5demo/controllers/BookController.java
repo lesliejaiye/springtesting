@@ -26,8 +26,10 @@ public class BookController {
     //our code defines that for that model we are going to define the attribute name 'books'
     //then execute book repository, which will give a list of books | 'find all'
     //and this will be provided to he clients view 
-    model.addAttribute("books", bookRepository.findAll());
-        return "books";
+        model.addAttribute("books", bookRepository.findAll());
+    
+    //this references this controller to look for the list file
+        return "books/list";
 
     }
 }

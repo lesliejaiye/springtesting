@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!--refrences thymeleaf namespaces and provides thymeleaf extensions to this document-->
+<html lang="em" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Spring Framework Guru</title>
+    </head>
+    <body>
+        <h1>Book List</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Publisher</th>
+        </tr>
+
+        <!--This is how we are asking the model to give the properties of books
+        we refrence the thymeleaf and then call the attribute name of the model
+        created in the controller-->
+        
+        <tr th:each="book :" ${books}>
+            <td th:text="${book.ID}">123</td>
+            <td th:text=${book.title}>Spring in Action</td>
+            <td th:text=${book.publisher.name}>Wrox</td>
+            
+
+        <!--thyme leaf will render this row of elements found in the model for view -->
+        <!--replacing the elements with ferences to ID to gather information from 
+        book repository-->
+        <!--Publisher is a little different because it is not a book object but its own-->
+        </tr>
+    </table>
+    </body>
+</html>
